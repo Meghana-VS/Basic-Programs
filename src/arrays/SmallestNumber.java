@@ -10,7 +10,13 @@ public class SmallestNumber {
        System.out.println(smallNum(arr));
     }
     public static int smallNum(int[] a){
-        Arrays.sort(a);
-        return a[0];
+//        Arrays.sort(a);
+//        return a[0];
+//        *********************************************
+        int mini = Integer.MAX_VALUE;
+        for (int num : a) {
+            mini = Math.min(mini, num);
+        }
+        return mini;
     }
 }
